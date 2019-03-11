@@ -1,0 +1,14 @@
+
+<div id="container">
+    <span>
+        <div *ngFor="let dummy of ' '.repeat(2).split(''), let i = index">
+                Can you see me
+            <div *ngFor="let dummy of ' '.repeat(4).split(''), let j = index">
+                
+            <app-info id="{{i*4 + j}}">
+    
+            </app-info>
+            </div>
+        </div>
+    </span>
+</div>

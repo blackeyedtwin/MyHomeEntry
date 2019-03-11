@@ -1,0 +1,15 @@
+<div>
+    <div *ngIf="!submitted">
+      <button class="twitchButton" (click)="selectTwitch()"> 
+          Add a Twitch Notification
+      </button>
+      <button class="stockButton" (click)="selectStock()"> 
+          Add a Stock Notification
+      </button>
+      <input type="text" id="text{{id}}" (keyup)="setStreamer($event)"/> 
+    </div>
+    <div *ngIf="submitted">
+      <h3 *ngIf="onlineStatus">{{streamer}} is online</h3>
+      <h3 *ngIf="!onlineStatus">{{streamer}} is offline</h3>
+    </div>
+</div>
